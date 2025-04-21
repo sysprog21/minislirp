@@ -24,8 +24,6 @@
 #ifndef UTIL_H_
 #define UTIL_H_
 
-#include "tinyglib.h"
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <assert.h>
@@ -47,6 +45,7 @@
 #endif
 
 #include "libslirp.h"
+#include "tinyglib.h"
 
 #ifdef __GNUC__
 #define SLIRP_PACKED_BEGIN

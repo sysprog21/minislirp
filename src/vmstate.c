@@ -39,10 +39,6 @@
  */
 #include <assert.h>
 #include <errno.h>
-#include <string.h>
-#include "tinyglib.h"
-
-#include "stream.h"
 #include "vmstate.h"
 
 static int get_nullptr(SlirpIStream *f, void *pv, size_t size,
