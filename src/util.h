@@ -37,7 +37,15 @@
 #include <windows.h>
 #include <ws2tcpip.h>
 #else
+/* macOS SDK workaround: prevent swab redefinition conflict */
+#ifdef __APPLE__
+#define _DONT_USE_CTYPE_INLINE_
+#define swab swab_disabled
+#endif
 #include <unistd.h>
+#ifdef __APPLE__
+#undef swab
+#endif
 #include <sys/socket.h>
 #include <netinet/tcp.h>
 #include <netinet/in.h>
